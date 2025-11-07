@@ -1,0 +1,149 @@
+#servicos {  
+  height: auto; /* padrão */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 150px 100px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+
+}
+
+#servicos.show {
+  opacity: 1;
+  transform: translateY(0)
+  }
+
+
+.frase2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0;
+  text-align: left;   /* texto alinhado à esquerda */
+  color: rgb(205, 205, 205);
+  font-size: 60px;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+.frase2.show {
+  opacity: 1;
+  transform: translateY(0);
+  }
+
+
+
+.acordeao {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  width: 100%;
+
+  /* efeitos de entrada */
+  opacity: 0;
+  transform: translateY(30px);
+
+  /* transições */
+  transition: 
+    border-color 0.3s ease, 
+    box-shadow 0.3s ease,
+    opacity 1.2s ease, 
+    transform 1.2s ease;
+}
+
+/* Quando entra na tela */
+.acordeao.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.acordeao:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 20px rgba(0, 255, 174, 0.08);
+}
+
+/* Título */
+.acordeao-titulo {
+  width: 100%;
+  padding: 40px 20px;
+  background: none;
+  border: none;
+  color: rgb(197, 197, 197);
+  font-size: 28px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s ease;
+}
+
+.acordeao-titulo:hover {
+  color: #ffffff;
+}
+
+/* Ícone + texto */
+.titulo-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icone {
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+
+/* Conteúdo */
+.acordeao-conteudo {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, 
+  padding 0.4s ease, 
+  opacity 0.4s ease;
+  padding: 0 28px;
+  opacity: 0;
+}
+
+.acordeao.open .acordeao-conteudo {
+  padding: 10px 35px 120px;
+  opacity: 1;
+}
+
+.acordeao-conteudo p {
+  color: #bdbdbd;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Transição suave ao abrir */
+.acordeao.open {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 18px rgba(0, 255, 174, 0.08);
+}
+
+/* Indicador (bolinha animada) */
+.indicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.35s ease;
+}
+
+/* Quando o mouse passa sobre o botão do acordeão */
+.acordeao:hover .indicador {
+  background: hwb(59 12% 40%); /* cor ao passar o mouse */
+}

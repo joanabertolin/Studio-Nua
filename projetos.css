@@ -1,0 +1,191 @@
+#projetos {  
+  height: auto; /* padrão */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 100px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+
+}
+
+#projetos.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Portfólio */
+.portfolio1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  overflow: visible;
+  width: 100vw;         /* usa toda a largura da viewport */
+  max-width: 100vw;     /* remove o limite anterior de 1500px */
+  position: relative;
+  left: 50%;            /* centraliza corretamente */
+  right: 50%;
+  margin-left: -50vw;   /* “puxa” o elemento para fora das margens do body */
+  margin-right: -50vw;  /* garantindo que ocupe a tela toda */
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 80s linear infinite; /* mais lento */
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.carousel-item img {
+  width: 400px;
+  height: 400px; /* quadrado */
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.03);
+}
+
+/* Animação do carrossel */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pop-up da descrição */
+.descricao-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  display: none;
+  z-index: 1000;
+  max-width: 500px;
+  text-align: center;
+}
+
+.descricao-popup p {
+  margin-bottom: 15px;
+}
+
+.descricao-popup .fechar {
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-block;
+  padding: 5px 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+}
+
+
+.portfolio img.ativo {
+  transform: scale(1.05);
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+/* Portfólio */
+.portfolio2 {
+  margin auto;
+  margin-bottom: 40px;
+  overflow: visible;
+  width: 100vw;         /* usa toda a largura da viewport */
+  max-width: 100vw;     /* remove o limite anterior de 1500px */
+  position: relative;
+  left: 50%;            /* centraliza corretamente */
+  right: 50%;
+  margin-left: -50vw;   /* “puxa” o elemento para fora das margens do body */
+  margin-right: -50vw;  /* garantindo que ocupe a tela toda */
+}
+
+/* Segundo carrossel (invertido) */
+.track-invertido {
+  display: flex;
+  animation: scroll-invert 80s linear infinite; /* usa a animação invertida */
+}
+
+@keyframes scroll-invert {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); } /* muda o sinal para inverter a direção */
+}
+
+.carousel-invertido {
+  flex: 0 0 auto;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.carousel-invertido img {
+  width: 400px;
+  height: 400px; /* quadrado */
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.carousel-invertido img:hover {
+  transform: scale(1.05);
+}
+
+/* Animação do segundo carrossel (direita para esquerda) */
+@keyframes scroll-invert {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); } /* muda o sinal para inverter a direção */
+}
+
+/* Pop-up da descrição */
+.descricao-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  display: none;
+  z-index: 1000;
+  max-width: 500px;
+  text-align: center;
+}
+
+.descricao-popup p {
+  margin-bottom: 15px;
+}
+
+.descricao-popup .fechar {
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-block;
+  padding: 5px 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+}
+
+
+
+

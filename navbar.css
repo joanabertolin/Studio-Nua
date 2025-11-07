@@ -1,0 +1,105 @@
+header {
+   position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 28px 8%;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#icone {
+    width: 40px;  
+    height: auto;
+    position: relative;
+    right: 30px; 
+}
+
+#nav_list {
+    position: relative;
+    left: 55px;
+    display: flex;
+    list-style: none;
+    gap: 6px;
+    border: 1px solid rgb(52, 52, 52);
+    border-radius: 45px;
+    width: 490px;    
+    height: 65px;  
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: rgb(235, 234, 231);
+    font-weight: 28S0;
+    font-size: 15px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border: 1px solid transparent; /* borda já existe, mas invisível */
+    background-color: transparent; 
+    border-radius: 90px; 
+    padding: 10px 24px; 
+    transition: 0.3s ease; /* animação suave */
+}
+
+.nav-item :hover {
+    color: #1d1d1d;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: rgb(218, 218, 218); 
+    border: 1px solid rgb(65, 65, 65);
+    background-color: rgb(7, 7, 7); 
+    border-radius: 90px; 
+    padding: 12px 24px; 
+    text-decoration: none; }
+
+
+
+ #mobile_menu {
+    display: none;
+ }
+ 
+ #mobile_btn {
+    display: none;
+ }
+
+        @media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.3rem;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+    
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    }

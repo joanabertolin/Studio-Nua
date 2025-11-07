@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+   background-color: #000000;
+   color: aliceblue;
+}
+
+section {
+   padding: 28px 8%;
+  
+}
+
+
+.btn-default{
+  font-size: 15px;
+  font-weight: 450;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(218, 218, 218);
+  border: 1px solid #323232;
+  background-color: rgb(7, 7, 7);
+  border-radius: 90px;
+  width: 180px;    
+  height: 60px; 
+  text-decoration: none;
+  box-shadow: 0px 0px 10px 2px rgba (0,0,0,0.1);
+  cursor: pointer;
+  position: relative;
+  left: 30px;
+
+}
+
+.btn-default:hover{
+   box-shadow: 0 0 12px 5px rgba(35, 35, 35, 0.5); /* brilho dourado */
+   transform: scale(1.0); /* leve aumento do botão */
+}
+
+    #home {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  height: 80vh;           /* ocupa toda a altura da tela */
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* camada preta semitransparente */
+  z-index: 1; /* abaixo do texto, acima do vídeo */
+}
+
+#bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cobre todo o espaço */
+  z-index: 0; /* abaixo de tudo */
+  
+}
+
+#logo{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* joga o conteúdo do logo pra esquerda */
+  width: 65%;
+  height: auto;
+  text-align: left; /* texto alinhado à esquerda */
+  margin: 0; /* remove ajustes forçados */
+  padding-right:20px; /* ajusta a distância em relação à esquerda (igual ao menu) */
+  opacity: 0;
+  transform: translateY(30px); /* começa um pouco abaixo */
+  transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+#logo.show {
+  opacity: 1;
+  transform: translateY(0); /* volta para o lugar */
+}
+
+  
+
+body {
+  margin: 0;
+  background-color: rgb(7, 7, 7);
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+
+.nomesecao {
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(218, 218, 218);
+  border: 1px solid #282828;
+  background: #121212;
+  border-radius: 90px;
+  padding: 18px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  right: 10px;
+
+}
+

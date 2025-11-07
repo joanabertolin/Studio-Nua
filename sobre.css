@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  background-color: rgb(7, 7, 7);
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Seção da galeria */
+#galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0;
+  overflow: hidden;
+
+  /* NOVO */
+  position: relative;  /* necessário para z-index funcionar */
+  z-index: 10;         /* valor alto para ficar acima do home */
+  background:transparent; /* opcional: fundo semi-transparente */
+
+
+ /* animação inicial */
+  opacity: 0;               /* invisível no início */
+  transform: translateY(40px); /* deslocada para baixo */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* animação */
+}
+
+
+#galeria.show {
+  opacity: 1;
+  transform: translateY(0); /* volta para posição original */
+}
+
+#galeria .carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1500px; /* maior largura */
+  white-space: nowrap;
+  position: relative;
+}
+
+#galeria .carousel-track {
+  display: inline-flex;
+  animation: scroll 40s linear infinite; /* mais lento (antes era 20s) */
+}
+
+#galeria .carousel img {
+  width: 310px;  /* maior largura */
+  height: 190px; /* maior altura */
+  margin: 0 10px; /* mais espaçamento entre as imagens */
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Animação do carrossel */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+.frase {
+  height: auto; /* padrão */
+  max-width: 850px;
+  width: 100%;
+  margin: 0px auto; /* centraliza horizontalmente o bloco */
+  margin-top: 100px;
+  margin-bottom: 40px;
+  text-align: left;   /* texto alinhado à esquerda */
+  color: rgb(235, 234, 231);
+  font-size: 70px;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+.frase.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.destaque {
+  color: rgb(255, 255, 255);
+}
+  
+#sobre {
+  height: auto; /* padrão */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 100px;
+  margin-top: 200px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+
+}
+
+#sobre.show {
+  opacity: 1;
+  transform: translateY(0)
+  }
+
+
+h1 {
+  line-height: 1.6; /* 1.6 vezes o tamanho da fonte */
+  max-width: 1250px;
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 40px;
+  color: rgb(235, 234, 231);
+}
